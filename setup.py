@@ -150,7 +150,7 @@ def find_lua_build(no_luajit=False):
         packages = [('luajit', '2')]
     packages += [
         (name, lua_version)
-        for lua_version in ('5.2', '5.1')
+        for lua_version in ('5.3', '5.2', '5.1')
         for name in ('lua%s' % lua_version, 'lua-%s' % lua_version, 'lua')
     ]
 
@@ -169,7 +169,7 @@ def find_lua_build(no_luajit=False):
 
 
 def no_lua_error():
-    error = ("Neither LuaJIT2 nor Lua 5.1/5.2 were found. Please install "
+    error = ("Neither LuaJIT2 nor Lua 5.1/5.2/5.3 were found. Please install "
              "Lua and its development packages, "
              "or put a local build into the lupa main directory.")
     print(error)
