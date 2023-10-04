@@ -371,6 +371,9 @@ if not configs:
     configs = no_lua_error()
 
 
+print(configs)
+
+
 # check if Cython is installed, and use it if requested or necessary
 def prepare_extensions(use_cython=True):
     ext_modules = []
